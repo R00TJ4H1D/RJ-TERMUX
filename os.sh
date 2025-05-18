@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# টেলিগ্রাম চ্যানেল অটো ওপেন
+termux-open-url https://t.me/RootJahid
+sleep 2
+
 clear
 figlet "JAHID" | lolcat
 echo ""
@@ -15,12 +19,12 @@ wr() {
   menu
 }
 
-line1() {
+one_line() {
   apt update && apt upgrade -y
   pkg install zsh git figlet toilet ruby wget curl -y
   gem install lolcat
   clear
-  cd ~/Termux-os/.object/ && cp -r 'ANSI Shadow.flf' $PREFIX/share/figlet/ASCII-Shadow.flf
+  cd ~/Termux-os/.object/ && cp -r 'ANSI Shadow.flf'  $PREFIX/share/figlet/ASCII-Shadow.flf
   git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
   pkg install exa -y
   cd ~/Termux-os/.object
@@ -33,7 +37,7 @@ line1() {
   menu
 }
 
-line2() {
+two_line() {
   rm -rf ~/.zshrc
   git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
   cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
@@ -42,7 +46,7 @@ line2() {
   menu
 }
 
-line3() {
+three_line() {
   pkg install zsh -y
   chsh -s zsh
   sleep 2
@@ -50,14 +54,14 @@ line3() {
   menu
 }
 
-line4() {
+four_line() {
   chsh -s bash
   sleep 2
   clear
   menu
 }
 
-line5() {
+five_line() {
   rm -rf ~/.zshrc
   cd ~/Termux-os/.object
   bash .2.sh
@@ -66,7 +70,7 @@ line5() {
   menu
 }
 
-line6() {
+six_line() {
   cd ~/Termux-os/.object
   bash .1.sh
   sleep 2
@@ -74,7 +78,7 @@ line6() {
   menu
 }
 
-line7() {
+seven_line() {
   cd ~/Termux-os/.object
   rm -rf ~/.zshrc
   chsh -s zsh
@@ -84,7 +88,7 @@ line7() {
   menu
 }
 
-line8() {
+eight_line() {
   rm -rf ~/Termux-os
   cd
   git clone https://github.com/h4ck3r0/Termux-os
@@ -97,14 +101,14 @@ selection() {
   echo -e -n "\e[1;96mChoose Option : \e[0m"
   read a
   case $a in
-    1) line1 ;;
-    2) line2 ;;
-    3) line3 ;;
-    4) line4 ;;
-    5) line5 ;;
-    6) line6 ;;
-    7) line7 ;;
-    8) line8 ;;
+    1) one_line ;;
+    2) two_line ;;
+    3) three_line ;;
+    4) four_line ;;
+    5) five_line ;;
+    6) six_line ;;
+    7) seven_line ;;
+    8) eight_line ;;
     9) exit ;;
     *) wr ;;
   esac
