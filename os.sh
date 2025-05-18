@@ -1,10 +1,12 @@
+#!/bin/bash
+
 clear
 figlet "JAHID" | lolcat
 echo ""
 
 banner() {
-  echo -e "\e[1;92m[тИЪ] Script by JAHID\n"
-  echo -e "\e[1;31m[\e[32mтИЪ\e[31m] \e[1;91mBY \e[1;36mROOT JAHID \e[93m/ \e[100;92mhttps://t.me/RootJahid\e[0m\n"
+  echo -e "\e[1;92m[√] Script by JAHID\n"
+  echo -e "\e[1;31m[\e[32m√\e[31m] \e[1;91mby \e[1;36mRoot Jahid \e[93m/ \e[100;92mhttps://t.me/RootJahid\e[0m\n"
 }
 
 wr() {
@@ -13,12 +15,12 @@ wr() {
   menu
 }
 
-1line() {
+line1() {
   apt update && apt upgrade -y
   pkg install zsh git figlet toilet ruby wget curl -y
   gem install lolcat
   clear
-  cd ~/Termux-os/.object/ && cp -r 'ANSI Shadow.flf'  $PREFIX/share/figlet/ASCII-Shadow.flf
+  cd ~/Termux-os/.object/ && cp -r 'ANSI Shadow.flf' $PREFIX/share/figlet/ASCII-Shadow.flf
   git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
   pkg install exa -y
   cd ~/Termux-os/.object
@@ -31,7 +33,7 @@ wr() {
   menu
 }
 
-2line() {
+line2() {
   rm -rf ~/.zshrc
   git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
   cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
@@ -40,7 +42,7 @@ wr() {
   menu
 }
 
-3line() {
+line3() {
   pkg install zsh -y
   chsh -s zsh
   sleep 2
@@ -48,35 +50,31 @@ wr() {
   menu
 }
 
-4line() {
+line4() {
   chsh -s bash
   sleep 2
   clear
   menu
 }
 
-5line() {
+line5() {
   rm -rf ~/.zshrc
   cd ~/Termux-os/.object
-  sed -i 's|by Raj Aryan|BY ROOT JAHID|g' .2.sh
-  sed -i 's|youtube.com/h4ck3r_raj|https://t.me/RootJahid|g' .2.sh
   bash .2.sh
   sleep 2
   clear
   menu
 }
 
-6line() {
+line6() {
   cd ~/Termux-os/.object
-  sed -i 's|by Raj Aryan|BY ROOT JAHID|g' .1.sh
-  sed -i 's|youtube.com/h4ck3r_raj|https://t.me/RootJahid|g' .1.sh
   bash .1.sh
   sleep 2
   clear
   menu
 }
 
-7line() {
+line7() {
   cd ~/Termux-os/.object
   rm -rf ~/.zshrc
   chsh -s zsh
@@ -86,7 +84,7 @@ wr() {
   menu
 }
 
-8line() {
+line8() {
   rm -rf ~/Termux-os
   cd
   git clone https://github.com/h4ck3r0/Termux-os
@@ -99,14 +97,14 @@ selection() {
   echo -e -n "\e[1;96mChoose Option : \e[0m"
   read a
   case $a in
-    1) 1line ;;
-    2) 2line ;;
-    3) 3line ;;
-    4) 4line ;;
-    5) 5line ;;
-    6) 6line ;;
-    7) 7line ;;
-    8) 8line ;;
+    1) line1 ;;
+    2) line2 ;;
+    3) line3 ;;
+    4) line4 ;;
+    5) line5 ;;
+    6) line6 ;;
+    7) line7 ;;
+    8) line8 ;;
     9) exit ;;
     *) wr ;;
   esac
