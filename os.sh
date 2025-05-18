@@ -1,18 +1,10 @@
-#ржЪрзЛрж░рзЗрж░ ржмрж╛ржЪрзНржЪрж╛ ржкрж╛рж░рж▓рзЗ ржирж┐ржЬрзЗ ржХрж┐ржЫрзБ ржХрж░ ржорж╛ржирзБрж╖рзЗрж░ ржЯрж╛ ржЪрзБрж░рж┐ ржХрж░рзЗ ржмржбрж╝ рж╣рждрзЗ ржкрж╛рж░ржмрж┐ржирж╛ЁЯШВЁЯл╡
-#Copy Abal Ar Mare xudi 
-#RootJahid
-#ржХржкрж┐ ржирж╛ ржХрж░рзЗ ржЖржЧрзЗ рж╢рж┐ржЦрзЛ рждрж╛рж░ржкрж░ ржХрж░рзЛ ЁЯл╡
-#!/bin/bash
-
-xdg-open "https://t.me/RootJahid" > /dev/null 2>&1
-sleep 2
 clear
 figlet "JAHID" | lolcat
 echo ""
 
 banner() {
-  echo -e "\e[1;92m[тИЪ] Script by ROOT JAHID\n"
-  echo -e "\e[1;31m[\e[32mтИЪ\e[31m] \e[1;91mBY \e[1;36mRoot Jahid \e[93m/ \e[100;92mhttps://t.me/RootJahid\e[0m\n"
+  echo -e "\e[1;92m[тИЪ] Script by JAHID\n"
+  echo -e "\e[1;31m[\e[32mтИЪ\e[31m] \e[1;91mBY \e[1;36mROOT JAHID \e[93m/ \e[100;92mhttps://t.me/RootJahid\e[0m\n"
 }
 
 wr() {
@@ -66,6 +58,8 @@ wr() {
 5line() {
   rm -rf ~/.zshrc
   cd ~/Termux-os/.object
+  sed -i 's|by Raj Aryan|BY ROOT JAHID|g' .2.sh
+  sed -i 's|youtube.com/h4ck3r_raj|https://t.me/RootJahid|g' .2.sh
   bash .2.sh
   sleep 2
   clear
@@ -74,6 +68,8 @@ wr() {
 
 6line() {
   cd ~/Termux-os/.object
+  sed -i 's|by Raj Aryan|BY ROOT JAHID|g' .1.sh
+  sed -i 's|youtube.com/h4ck3r_raj|https://t.me/RootJahid|g' .1.sh
   bash .1.sh
   sleep 2
   clear
